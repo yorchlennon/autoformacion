@@ -6,7 +6,7 @@ bot = telebot.TeleBot('593925092:AAENICMP76F9pQhfuOy1U92QNK0srb6FVvI')
 @bot.message_handler(content_types=['text'])
 def localizame(mensaje):
   id_chat= mensaje.chat.id
-  bot.send.message(chat.id, mensaje)
+  bot.send_message(chat.id, mensaje)
  
 # api-endpoint
 URL = "http://maps.googleapis.com/maps/api/geocode/json"
@@ -31,8 +31,8 @@ longitude = data['results'][0]['geometry']['location']['lng']
 formatted_address = data['results'][0]['formatted_address']
  
 # printing the output
-print("Latitude:%s\nLongitude:%s\nFormatted Address:%s"
-      %(latitude, longitude,formatted_address))
+#print("Latitude:%s\nLongitude:%s\nFormatted Address:%s"
+#      %(latitude, longitude,formatted_address))
 
 bot.polling()
 #while True:
