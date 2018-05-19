@@ -26,10 +26,11 @@ def selfie(mensaje):
 @bot.message_handler(commands=['echo'])
 def echo(mensaje, repito):
      bot.send_message( id_chat, repito)
-     
-while True:
-    try:
-        bot.polling(none_stop=True)
-    except Exception as e:
-        logger.error(e)
-        time.sleep(15)
+
+bot.polling(none_stop=True)     
+#while True:
+#    try:
+#        bot.polling(none_stop=True)
+#    except Exception as e:
+#        logger.error(e)
+#        time.sleep(15)
