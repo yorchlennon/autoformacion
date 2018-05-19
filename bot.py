@@ -6,7 +6,8 @@ bot = telebot.TeleBot('538628418:AAFjQ3IGb0c2neSjAWO8xb5e0n1w1l2NN28')
 @bot.message_handler(commands=['saluda'])
 def saluda(mensaje):
      id_chat= mensaje.chat.id #El id del chat para saber el destino de la respuesta que va a enviar el bot
-     bot.send_message( id_chat, 'Que pasa gente') 
+     username= mensaje.message.username
+     bot.send_message( id_chat, 'Que pasa gente' + username) 
      
 @bot.message_handler(commands=['planes'])
 def planes(mensaje):
