@@ -22,7 +22,7 @@ def selfie(mensaje):
   # bot.send_photo(id_chat, photo=open('rattata.jpg', 'rb'))
 
 @bot.message_handler(commands=['echo'])
-     def echo(mensaje, repito)
+     def echo(mensaje, repito):
      bot.send_message( id_chat, repito)
      
 while True:
