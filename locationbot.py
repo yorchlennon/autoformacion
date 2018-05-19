@@ -18,7 +18,7 @@ def handle_text(mensaje):
   longitude = data['results'][0]['geometry']['location']['lng']
   formatted_address = data['results'][0]['formatted_address']
   #printing the output
-  localizacion ="Latitude:%s\nLongitude:%s\nFormatted Address:%s" %(latitude, longitude,formatted_address)
+  localizacion ="Direccion:%s\nLatitud:%s\nLongitud:%s" %(formatted_address,latitude, longitude)
   bot.send_message(id_chat, localizacion)
  
 
