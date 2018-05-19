@@ -5,7 +5,7 @@ import requests
 URL = "http://maps.googleapis.com/maps/api/geocode/json"
  
 # location given here
-location = "delhi technological university"
+location = "Babel Sistemas de Informacion Madrid"
  
 # defining a params dict for the parameters to be sent to the API
 PARAMS = {'address':location}
