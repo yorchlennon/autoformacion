@@ -18,7 +18,9 @@ def planes(mensaje):
 @bot.message_handler(commands=['selfie'])
 def selfie(mensaje):
     id_chat = mensaje.chat.id
-    bot.send_message( id_chat, 'ratata.jpg ............ No tengo el archivo, ahora estoy alojado en el pc de Jorge')
+    bot.send_message( id_chat, 'ratata.jpg')
+    bot.send_message( id_chat, '..')
+    bot.send_message( id_chat, 'No tengo el archivo, ahora estoy alojado en el pc de Jorge')
   # bot.send_photo(id_chat, photo=open('rattata.jpg', 'rb'))
 
 @bot.message_handler(commands=['echo'])
