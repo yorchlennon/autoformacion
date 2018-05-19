@@ -6,7 +6,7 @@ bot = telebot.TeleBot('593925092:AAENICMP76F9pQhfuOy1U92QNK0srb6FVvI')
 @bot.message_handler(content_types=['text'])
 def localizame(mensaje):
   id_chat= mensaje.chat.id
-  bot.send_message(chat.id, mensaje)
+  bot.send_message(id_chat, mensaje)
  
 # api-endpoint
 URL = "http://maps.googleapis.com/maps/api/geocode/json"
