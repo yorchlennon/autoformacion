@@ -27,7 +27,7 @@ def selfie(mensaje):
 def echo(mensaje, repito):
      bot.send_message( id_chat, repito)
 
-bot.polling
+bot.polling(none_stop=True)
 #while True:
 #    try:
 #        bot.polling(none_stop=True)
