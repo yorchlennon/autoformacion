@@ -6,7 +6,7 @@ bot = telebot.TeleBot('538628418:AAFjQ3IGb0c2neSjAWO8xb5e0n1w1l2NN28')
 @bot.message_handler(commands=['saluda'])
 def saluda(mensaje):
      id_chat= mensaje.chat.id #El id del chat para saber el destino de la respuesta que va a enviar el bot
-     username= mensaje.message.from.username
+     username= mensaje.username
      bot.send_message( id_chat, 'Que pasa gente' + username) 
      
 @bot.message_handler(commands=['planes'])
@@ -26,7 +26,8 @@ def selfie(mensaje):
 
 @bot.message_handler(commands=['echo'])
 def echo(mensaje, repito):
-     bot.send_message( id_chat, repito)
+     id_chat = mensaje.chat.id
+     bot.send_message( id_chat, "esto no funca")
 
 bot.polling()
 #while True:
