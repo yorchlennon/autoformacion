@@ -25,7 +25,7 @@ def selfie(mensaje):
   # bot.send_photo(id_chat, photo=open('rattata.jpg', 'rb'))
 
 @bot.message_handler(commands=['echo'])
-def echo(mensaje, repito):
+def echo(mensaje):
      id_chat = mensaje.chat.id
      bot.send_message( id_chat, "esto no funca")
 
