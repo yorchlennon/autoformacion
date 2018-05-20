@@ -2,6 +2,7 @@
 import telebot 
 import requests
 import logging
+import time
 bot = telebot.TeleBot('593925092:AAENICMP76F9pQhfuOy1U92QNK0srb6FVvI')
 
 @bot.message_handler(content_types=['text'])
