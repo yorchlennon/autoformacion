@@ -22,7 +22,7 @@ def handle_text(mensaje):
   localizacion ="Direccion:%s\nLatitud:%s\nLongitud:%s" %(formatted_address,latitude, longitude)
   bot.send_message(id_chat, localizacion)
  
-
+logger = logging.getLogger('simple_example')
 
 while True:
     try:
