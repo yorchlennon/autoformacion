@@ -23,10 +23,10 @@ def handle_text(mensaje):
   bot.send_message(id_chat, localizacion)
  
 
-bot.polling()
-#while True:
-#    try:
-#        bot.polling(none_stop=True)
-#    except Exception as e:
-#        logger.error(e)
-#        time.sleep(15)
+
+while True:
+    try:
+        bot.polling(none_stop=True)
+    except Exception as e:
+        logger.error(e)
+        time.sleep(15)
