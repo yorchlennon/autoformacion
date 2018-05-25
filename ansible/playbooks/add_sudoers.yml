@@ -1,0 +1,18 @@
+---
+
+- hosts: lab
+  tasks:
+   - name: Comprueba si sudoers.backup está creado
+     stat:
+         path: /etc/sudoers.BACKUP
+     register: f
+   - name: Backup de Sudoers
+     copy:
+         src: /etc/sudoers
+         dest: /etc/sudoers.BACKUP
+         remote_src: yes
+     when: not f.stat.exists
+   - name: Añade usuario
+     lineinfile:
+         dest: /etc/sudoers
+         line: '{{ user }} ALL=(ALL:ALL) ALL'

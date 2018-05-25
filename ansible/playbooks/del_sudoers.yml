@@ -1,0 +1,17 @@
+---
+
+- hosts: lab
+  tasks:
+   - name: Elimina Usuarios de Sudoers
+     file:
+            path: /etc/sudoers
+            state: absent
+   - name: Recuperacion del Backup
+     copy:
+            src: /etc/sudoers.BACKUP
+            dest: /etc/sudoers
+            remote_src: yes
+   - name: Borrado de BACKUP
+     file:
+            path: /etc/sudoers.BACKUP
+            state: absent

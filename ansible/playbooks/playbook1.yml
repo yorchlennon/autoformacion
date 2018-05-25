@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  tasks:
+   - name: instala vim
+     apt: name=vim state=present
+   - name: saluda
+     shell: echo hola
+   - name: Instala apache2
+     apt: name=apache2 state=present update_cache=true
+     notify:
+       - "Reinicia el servidor"
+  handlers:
+   - name: Reinicia el servidor
+     service: name=apache2 state=restarted

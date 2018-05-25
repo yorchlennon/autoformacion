@@ -1,0 +1,6 @@
+---
+
+- hosts: lab
+  tasks:
+   - name: Apaga los equipos
+     shell: shutdown -h now

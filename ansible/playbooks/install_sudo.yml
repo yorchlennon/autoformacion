@@ -1,0 +1,9 @@
+---
+
+- hosts: lab
+  tasks:
+   - name: instala sudo, actualiza repositorio y paquetes
+     apt:
+         update_cache: yes
+         name: sudo 
+         state: present
